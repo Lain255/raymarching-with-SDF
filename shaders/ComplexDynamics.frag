@@ -134,11 +134,11 @@ float SDF(vec3 v) {
 
     //modv += 0.1*vec3(sin(modv.y), cos(modv.z), sin(modv.x*modv.y));
     //minDist = min(minDist, SDF_sphere(v, S));
-    //minDist = min(minDist, SDF_tetrahedron(v, T));
+    minDist = min(minDist, SDF_tetrahedron(v, T));
     //minDist = min(minDist, SDF_pill(v, P));
     //minDist = min(minDist, SDF_line(v, P.start, P.end));
     //minDist = min(minDist, SDF_triangle(v, T.p1, T.p2, T.p4));
-    minDist = min(minDist, SDF_triangle(v, vec3(2,2,7), vec3(7,2,2), vec3(5,7,5)));
+    //minDist = min(minDist, SDF_triangle(v, vec3(2,2,7), vec3(7,2,2), vec3(5,7,5)));
 
     return minDist;
 }
